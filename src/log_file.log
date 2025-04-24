@@ -282,3 +282,286 @@ Confusion Matrix:
  [ 26   0 466]]
 
 INFO: 2021-12-29 16:02:02,667: Random Forest Model with Grid Search Saved in Pickle
+INFO: 2025-04-23 19:22:53,652: Feature Selection
+INFO: 2025-04-23 19:23:11,150: Features ['age', 'TSH', 'TT4', 'FTI', 'on_thyroxine', 'pregnant', 'query_hypothyroid', 'lithium', 'FTI_measured', 'TBG_measured']
+INFO: 2025-04-23 19:23:15,294: Traininig Random Forest Model
+INFO: 2025-04-23 19:23:15,416: Train Result:
+===============
+Accuracy Score:99.82%
+---------------------------------
+Classification Report:
+                     0            1            2       3  accuracy  \
+precision     0.994428     1.000000     0.998474     1.0  0.998217   
+recall        1.000000     0.992868     1.000000     1.0  0.998217   
+f1-score      0.997206     0.996421     0.999236     1.0  0.998217   
+support    1963.000000  1963.000000  1963.000000  1963.0  0.998217   
+
+             macro avg  weighted avg  
+precision     0.998225      0.998225  
+recall        0.998217      0.998217  
+f1-score      0.998216      0.998216  
+support    7852.000000   7852.000000  
+-----------------------------------
+Confusion Matrix:
+[[1963    0    0    0]
+ [  11 1949    3    0]
+ [   0    0 1963    0]
+ [   0    0    0 1963]]
+
+INFO: 2025-04-23 19:23:15,445: Test Result:
+===============
+Accuracy Score:97.76%
+---------------------------------
+Classification Report:
+                    0           1           2  accuracy    macro avg  \
+precision    0.937143    1.000000    1.000000  0.977642     0.979048   
+recall       1.000000    0.989837    0.943089  0.977642     0.977642   
+f1-score     0.967552    0.994893    0.970711  0.977642     0.977719   
+support    492.000000  492.000000  492.000000  0.977642  1476.000000   
+
+           weighted avg  
+precision      0.979048  
+recall         0.977642  
+f1-score       0.977719  
+support     1476.000000  
+---------------------------------
+Confusion Matrix:
+[[492   0   0]
+ [  5 487   0]
+ [ 28   0 464]]
+
+INFO: 2025-04-23 19:23:17,571: Train Result:
+===============
+Accuracy Score:100.00%
+---------------------------------
+Classification Report:
+                0       1       2       3  accuracy  macro avg  weighted avg
+precision     1.0     1.0     1.0     1.0       1.0        1.0           1.0
+recall        1.0     1.0     1.0     1.0       1.0        1.0           1.0
+f1-score      1.0     1.0     1.0     1.0       1.0        1.0           1.0
+support    1963.0  1963.0  1963.0  1963.0       1.0     7852.0        7852.0
+-----------------------------------
+Confusion Matrix:
+[[1963    0    0    0]
+ [   0 1963    0    0]
+ [   0    0 1963    0]
+ [   0    0    0 1963]]
+
+INFO: 2025-04-23 19:23:17,601: Test Result:
+===============
+Accuracy Score:98.10%
+---------------------------------
+Classification Report:
+                    0           1           2  accuracy    macro avg  \
+precision    0.946154    1.000000    1.000000   0.98103     0.982051   
+recall       1.000000    0.995935    0.947154   0.98103     0.981030   
+f1-score     0.972332    0.997963    0.972860   0.98103     0.981052   
+support    492.000000  492.000000  492.000000   0.98103  1476.000000   
+
+           weighted avg  
+precision      0.982051  
+recall         0.981030  
+f1-score       0.981052  
+support     1476.000000  
+---------------------------------
+Confusion Matrix:
+[[492   0   0]
+ [  2 490   0]
+ [ 26   0 466]]
+
+INFO: 2025-04-23 19:31:03,319: Use Randomized Search CV
+INFO: 2025-04-23 19:40:08,825: RandomForestClassifier(criterion='entropy', max_depth=780, max_features='log2',
+                       min_samples_split=4, n_estimators=400)
+INFO: 2025-04-23 19:40:10,653: Result with best estimetors
+INFO: 2025-04-23 19:40:10,775: Test Result:
+===============
+Accuracy Score:98.10%
+---------------------------------
+Classification Report:
+                    0           1           2  accuracy    macro avg  \
+precision    0.946154    1.000000    1.000000   0.98103     0.982051   
+recall       1.000000    0.995935    0.947154   0.98103     0.981030   
+f1-score     0.972332    0.997963    0.972860   0.98103     0.981052   
+support    492.000000  492.000000  492.000000   0.98103  1476.000000   
+
+           weighted avg  
+precision      0.982051  
+recall         0.981030  
+f1-score       0.981052  
+support     1476.000000  
+---------------------------------
+Confusion Matrix:
+[[492   0   0]
+ [  2 490   0]
+ [ 26   0 466]]
+
+INFO: 2025-04-23 19:40:13,367: Parameter Grid: {'criterion': ['entropy'], 'max_depth': [780], 'max_features': ['log2'], 'min_samples_leaf': [1, 3, 5], 'min_samples_split': [2, 3, 4, 5, 6], 'n_estimators': [200, 300, 400, 500, 600]}
+INFO: 2025-04-23 20:23:49,502: Grid Search CV: 
+INFO: 2025-04-23 20:24:42,496: Best Grid: RandomForestClassifier(criterion='entropy', max_depth=780, max_features='log2',
+                       min_samples_split=4, n_estimators=300)
+INFO: 2025-04-23 20:24:46,018: Result with Best Grid: 
+INFO: 2025-04-23 20:24:46,096: Test Result:
+===============
+Accuracy Score:97.97%
+---------------------------------
+Classification Report:
+                    0           1           2  accuracy    macro avg  \
+precision    0.942529    1.000000    1.000000  0.979675     0.980843   
+recall       1.000000    0.995935    0.943089  0.979675     0.979675   
+f1-score     0.970414    0.997963    0.970711  0.979675     0.979696   
+support    492.000000  492.000000  492.000000  0.979675  1476.000000   
+
+           weighted avg  
+precision      0.980843  
+recall         0.979675  
+f1-score       0.979696  
+support     1476.000000  
+---------------------------------
+Confusion Matrix:
+[[492   0   0]
+ [  2 490   0]
+ [ 28   0 464]]
+
+INFO: 2025-04-23 20:24:48,858: Random Forest Model with Grid Search Saved in Pickle
+INFO: 2025-04-24 13:08:45,679: Feature Selection
+INFO: 2025-04-24 13:08:46,823: Features ['age', 'TSH', 'TT4', 'FTI', 'on_thyroxine', 'pregnant', 'hypopituitary', 'psych', 'TT4_measured', 'referral_source']
+INFO: 2025-04-24 13:08:49,295: Traininig Random Forest Model
+INFO: 2025-04-24 13:08:49,350: Train Result:
+===============
+Accuracy Score:99.80%
+---------------------------------
+Classification Report:
+                     0            1            2       3  accuracy  \
+precision     0.993421     1.000000     0.998474     1.0  0.997962   
+recall        1.000000     0.991849     1.000000     1.0  0.997962   
+f1-score      0.996700     0.995908     0.999236     1.0  0.997962   
+support    1963.000000  1963.000000  1963.000000  1963.0  0.997962   
+
+             macro avg  weighted avg  
+precision     0.997974      0.997974  
+recall        0.997962      0.997962  
+f1-score      0.997961      0.997961  
+support    7852.000000   7852.000000  
+-----------------------------------
+Confusion Matrix:
+[[1963    0    0    0]
+ [  13 1947    3    0]
+ [   0    0 1963    0]
+ [   0    0    0 1963]]
+
+INFO: 2025-04-24 13:08:49,398: Test Result:
+===============
+Accuracy Score:97.22%
+---------------------------------
+Classification Report:
+                    0           1           2    3  accuracy    macro avg  \
+precision    0.924812    1.000000    1.000000  0.0  0.972222     0.731203   
+recall       1.000000    0.981707    0.934959  0.0  0.972222     0.729167   
+f1-score     0.960938    0.990769    0.966387  0.0  0.972222     0.729523   
+support    492.000000  492.000000  492.000000  0.0  0.972222  1476.000000   
+
+           weighted avg  
+precision      0.974937  
+recall         0.972222  
+f1-score       0.972698  
+support     1476.000000  
+---------------------------------
+Confusion Matrix:
+[[492   0   0   0]
+ [  8 483   0   1]
+ [ 32   0 460   0]
+ [  0   0   0   0]]
+
+INFO: 2025-04-24 13:08:52,080: Train Result:
+===============
+Accuracy Score:100.00%
+---------------------------------
+Classification Report:
+                0       1       2       3  accuracy  macro avg  weighted avg
+precision     1.0     1.0     1.0     1.0       1.0        1.0           1.0
+recall        1.0     1.0     1.0     1.0       1.0        1.0           1.0
+f1-score      1.0     1.0     1.0     1.0       1.0        1.0           1.0
+support    1963.0  1963.0  1963.0  1963.0       1.0     7852.0        7852.0
+-----------------------------------
+Confusion Matrix:
+[[1963    0    0    0]
+ [   0 1963    0    0]
+ [   0    0 1963    0]
+ [   0    0    0 1963]]
+
+INFO: 2025-04-24 13:08:52,112: Test Result:
+===============
+Accuracy Score:98.37%
+---------------------------------
+Classification Report:
+                    0           1           2  accuracy    macro avg  \
+precision    0.953488    1.000000    1.000000   0.98374     0.984496   
+recall       1.000000    0.995935    0.955285   0.98374     0.983740   
+f1-score     0.976190    0.997963    0.977131   0.98374     0.983762   
+support    492.000000  492.000000  492.000000   0.98374  1476.000000   
+
+           weighted avg  
+precision      0.984496  
+recall         0.983740  
+f1-score       0.983762  
+support     1476.000000  
+---------------------------------
+Confusion Matrix:
+[[492   0   0]
+ [  2 490   0]
+ [ 22   0 470]]
+
+INFO: 2025-04-24 13:15:52,153: Use Randomized Search CV
+INFO: 2025-04-24 13:16:17,550: RandomForestClassifier(criterion='entropy', max_depth=560, min_samples_split=9,
+                       n_estimators=400)
+INFO: 2025-04-24 13:16:19,305: Result with best estimetors
+INFO: 2025-04-24 13:16:19,456: Test Result:
+===============
+Accuracy Score:97.97%
+---------------------------------
+Classification Report:
+                    0           1           2  accuracy    macro avg  \
+precision    0.942529    1.000000    1.000000  0.979675     0.980843   
+recall       1.000000    0.995935    0.943089  0.979675     0.979675   
+f1-score     0.970414    0.997963    0.970711  0.979675     0.979696   
+support    492.000000  492.000000  492.000000  0.979675  1476.000000   
+
+           weighted avg  
+precision      0.980843  
+recall         0.979675  
+f1-score       0.979696  
+support     1476.000000  
+---------------------------------
+Confusion Matrix:
+[[492   0   0]
+ [  2 490   0]
+ [ 28   0 464]]
+
+INFO: 2025-04-24 13:16:21,509: Parameter Grid: {'criterion': ['entropy'], 'max_depth': [560], 'max_features': ['sqrt'], 'min_samples_leaf': [1, 3, 5], 'min_samples_split': [7, 8, 9, 10, 11], 'n_estimators': [200, 300, 400, 500, 600]}
+INFO: 2025-04-24 14:00:19,713: Grid Search CV: 
+INFO: 2025-04-24 14:00:19,747: Best Grid: RandomForestClassifier(criterion='entropy', max_depth=560, min_samples_split=7,
+                       n_estimators=400)
+INFO: 2025-04-24 14:20:54,030: Result with Best Grid: 
+INFO: 2025-04-24 14:20:54,170: Test Result:
+===============
+Accuracy Score:97.97%
+---------------------------------
+Classification Report:
+                    0           1           2  accuracy    macro avg  \
+precision    0.942529    1.000000    1.000000  0.979675     0.980843   
+recall       1.000000    0.995935    0.943089  0.979675     0.979675   
+f1-score     0.970414    0.997963    0.970711  0.979675     0.979696   
+support    492.000000  492.000000  492.000000  0.979675  1476.000000   
+
+           weighted avg  
+precision      0.980843  
+recall         0.979675  
+f1-score       0.979696  
+support     1476.000000  
+---------------------------------
+Confusion Matrix:
+[[492   0   0]
+ [  2 490   0]
+ [ 28   0 464]]
+
+INFO: 2025-04-24 14:20:55,450: Random Forest Model with Grid Search Saved in Pickle
