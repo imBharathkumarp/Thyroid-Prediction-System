@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=D:\5. Project\Thyroid-Disease-Detection\Thyroid-Disease-Detection-main\my_env"
+set "VIRTUAL_ENV=D:\Open-Source Projects\Thyroid-Prediction-System\my_env"
 
 if not defined PROMPT set PROMPT=$P$G
 
