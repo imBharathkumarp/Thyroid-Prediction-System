@@ -90,14 +90,7 @@ pip install -r requirements.txt
 ```bash
 gunicorn main:app
 ```
+---
 ## ⭐ Show your support
 **If you like this project, kindly ⭐ the repo to support me!**
-
-
 ---
-
-✅ **Now you can directly paste it inside `README.md` file.**
-
----
-Would you also like me to create a **`LICENSE` file** (MIT License) so that your project looks even more professional for GitHub? 🚀  
-If yes, just tell me! 🌟
